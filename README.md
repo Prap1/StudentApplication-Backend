@@ -29,18 +29,23 @@ Let’s start by create a simple Model class.
 
 Here you have a Student class with four attributes: id, name, language, and frameWork. The @Document annotation marks a class as being a domain object that we want to persist to the database. Note: This annotation is the Mongo equivalent of @Entity in JPA.
 The id is mostly for internal use by MongoDB. The @Id annotation tells spring that the id field will be used as the primary identifier. The rest of the class contains the basic constructors,and in place of  getters, and setters I used lombook for Student object. 
+
 Step 5. Spring Data MongoDB — MongoRepository
 We will now create a repository by making an interface.
  
 StudentRepository extends the MongoRepository interface and plugs in the type of values and ID that it works with: Movie and Integer, respectively. This will give us access to all the CRUD (create, read, update, and delete) operations around the MongoDB collection.
+
 Step 6. Defining the Controller
 Finally, we will create the REST controller. The APIs which we will be creating will access the studentService.
+
 GET - Get all StudentData & Get student by ID & Get student by NAME
  
  
 POST - Add a STUDENT
+
  
 DELETE - Delete a student
+
  
 Completed Controller
 Here is the completed controller with all the methods added to it
